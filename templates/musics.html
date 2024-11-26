@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://kit.fontawesome.com/ea36fdeb86.js" crossorigin="anonymous"></script>
+    <title>Music Player</title>
+</head>
+<body>
+    <div class="firstContainer">
+        <div class="meuContainer">
+            <a href="{{ url_for('home') }}" class="menu">Home</a>
+            <a href="{{ url_for('musics') }}" class="menu">Musics</a>
+            <a href="{{ url_for('artist') }}" class="menu">Artists</a>
+        </div>
+        <div class="logInContainer">
+            <a href="{{ url_for('login') }}" class="logIn">Login</a>
+        </div>    
+    </div>
+    <div class="container">
+        <!-- Playlist Section -->
+        <div class="playList">
+            {% for track in tracks %}
+            <div class="trackItem" data-track-id="{{ track.file }}" data-image="{{ track.image }}">
+                {{ loop.index }}. {{ track.title }}
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Music Player Section -->
+        <div class="Music">
+            <!-- Track Image -->
+            <div class="photos">
+                <img src="{{ url_for('static', filename='images/9847586.jpg') }}" alt="Track Image" class="images" id="trackImages">
+            </div>
+
+            <!-- Audio Tag -->
+            <audio src="" class="play"></audio>
+
+            <!-- Playing Time -->
+            <div id="playingTime" class="playingTime">00:00 / 00:00</div>
+
+            <!-- Repeat and Shuffle Controls -->
+            <div class="repeatAndShfell">
+                <i class="fa-solid fa-repeat controlOne" id="repeatButton">
+                    <span class="One" style="display: none;">1</span> <!-- Initially hidden -->
+                </i>
+                <i class="fa-solid fa-shuffle controlOne"></i>
+            </div>
+
+            <!-- Progress Bar -->
+            <div id="progressBar">
+                <div id="currentProgress"></div>
+            </div>
+
+            <!-- Music Player Controls -->
+            <div class="musicPlayer">
+                <i class="fa-solid fa-backward control previousButton"></i>
+                <i class="fa-solid fa-play control playButton"></i>
+                <i class="fa-solid fa-pause control pauseButton" style="display: none;"></i>
+                <i class="fa-solid fa-forward control nextButton"></i>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <!-- Include Your Script -->
+    <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+</body>
+</html>

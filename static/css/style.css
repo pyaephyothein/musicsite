@@ -1,0 +1,495 @@
+body {
+    background-image: url("../images/image 0.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Default font */
+}
+
+.firstContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+
+.meuContainer {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.menu {
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #9e6b06;
+    padding: 3px 20px;
+}
+
+.menu:hover {
+    text-decoration: underline;
+}
+
+.logInContainer {
+   
+    margin-right: 50px;
+    font-size: 20px;
+
+}
+
+.logIn {
+    color: white;
+    text-decoration: none;
+    border: 2px solid #9e6b06;
+    padding: 3px 20px;
+}
+
+.logIn:hover {
+    text-decoration: underline;
+}
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.text {
+    font-size: 40px;
+    color: #D9BD6A;
+    margin-bottom: -20px;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+    
+
+
+.resultText {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 100px auto 0; /* Center horizontally and adjust top margin */
+    text-align: center;
+}
+
+.inputWapper {
+    position: relative;
+    width: 100%;
+}
+
+.autocompleteInput {
+    width: 100%;
+    height: 60px;
+    border: none;
+    padding: 10px 35px 10px 15px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255,0.9);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4b6df4;
+    pointer-events: none;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.resultContainer {
+    width: 100%;
+    max-width: 300px; 
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 250px; 
+    overflow-y: auto; 
+    display: none; 
+}
+.playList {
+    width: 45%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+}
+.playList:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+.Music {
+    width: 45%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(232, 213, 244, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.Music:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+.trackItem {
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    user-select: none;
+}
+.trackItem:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Highlight track on hover */
+}
+
+.photos {
+    width: 100%;
+    max-width: 350px; /* Slightly smaller for balance */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.images {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+#playingTime {
+    color: gold;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Progress Bar */
+#progressBar {
+    width: 100%;
+    max-width: 450px; /* Adjust the size of the progress bar */
+    height: 15px;
+    background-color: gold;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+#currentProgress {
+    width: 0;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Player Controls */
+.control {
+    font-size: 1.8rem;
+    color: gold;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.repeatAndShfell {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
+}
+
+.controlOne {
+    font-size: 1.3rem;
+    color: gold;
+}
+
+
+.logInPageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.logInForFrame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 450px;
+    background-color: rgb(255, 255, 255,0.6);
+    border-radius: 40px;
+}
+
+.formControlContainer {
+    margin-top: 10px;
+    
+}
+h1 {
+    color: #EFF294;
+    margin-top: -30px;
+    
+}
+h5.white {
+    color: white;
+
+}
+h5.whiteOne {
+    color: white;
+    margin-top: .5rem;
+}
+.form-check {
+    margin-top: 20px;
+    margin-left: 0px;
+    font-size: 15px;
+    color: white;
+}
+.forGetPassword {
+    margin-left: 17px;
+    font-size: 14px;
+}
+.buttomLoginandSignup {
+    margin-top: 15px;
+    margin-left: 50px;
+  
+}
+
+.logInForm {
+    width: 300px;
+    height: 40px;
+}
+.logInFormOne {
+    width: 300px;
+    height: 40px;
+}
+
+.buttomdiv {
+    width: 100px;
+    border: none;
+    border-radius: 30px;
+    height: 35px;
+    font-size: 16px;
+    
+}
+a.buttomdivforSingUp {
+    color: white;
+}
+
+.logIniconContainer {
+    margin-top: 20px;
+}
+a {
+    text-decoration: none;
+}
+.fa-brands {
+    font-size: 28px;
+    color: #0d6efd;
+    text-decoration: none;
+    
+    
+}
+.fa-brandsOne {
+    margin-left: 20px;
+    
+}
+.fa-brands:hover {
+    text-decoration: underline;
+}
+
+.textForLogin {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #EFF294;
+    margin-left: 50px;
+    
+    
+    
+}
+.signUpContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.singUpFrame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 570px;
+    background-color: rgb(255, 255, 255,0.6);
+    border-radius: 40px;
+
+}
+
+.h1SingUp {
+    margin-top: -20px;
+}
+.tagForm {
+    width: 400px;  
+    margin-top: 20px;
+}
+.tagFormOne {
+    margin-top: 10px;
+    width: 400px;
+
+}
+
+.buttomSingUpFrame {
+    width: auto;
+    height: auto;
+    
+    
+}
+.buttomSingUpContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+.orFrame {
+  
+   color: #EFF294;
+}
+.logIniconContainerSignUp {
+    margin-top: 5px;
+
+
+}
+.icon-link {
+    margin-left: 10px;
+    
+}
+.btn-close {
+    font-size: 15px;
+}
+.alert-container {
+    width: 250px;
+    height: auto;
+    margin-top: -30px;
+}
+
+
+
+/* Responsive Design: Media Queries */
+@media only screen and (max-width: 1024px) {
+    /* Tablet and smaller desktop adjustments */
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .playList, .Music {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    #progressBar {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* For tablets and small devices */
+    .firstContainer {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .menuContainer {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .menu {
+        margin: 10px 0;
+        font-size: 0.9rem;
+    }
+
+    .photos {
+        max-width: 300px;
+    }
+
+    .fa-magnifying-glass {
+        right: 10px;
+    }
+
+    .autocompleteInput {
+        font-size: 0.8rem;
+    }
+
+    .control {
+        font-size: 1.5rem;
+    }
+
+    #progressBar {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* For phones and smaller screens */
+    .menuContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+
+    .autocompleteInput {
+        font-size: 0.75rem;
+    }
+
+    .photos {
+        max-width: 250px;
+    }
+
+    .control {
+        font-size: 1.2rem;
+    }
+
+    .repeatAndShfell {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    #progressBar {
+        width: 75%;
+    }
+
+    #playingTime {
+        font-size: 0.9rem;
+    }
+}
