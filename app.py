@@ -33,8 +33,8 @@ mail = Mail(app)
 
 
 
-app.config["GOOGLE_OAUTH_CLIENT_ID"] = "993022696976-546stor7q23v34lniuursuj3c2abf31t.apps.googleusercontent.com"
-app.config["GOOGLE_OAUTH_CLIENT_SECRET"] = "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"
+app.config["GOOGLE_OAUTH_CLIENT_ID"] = ""
+app.config["GOOGLE_OAUTH_CLIENT_SECRET"] = ""
 google_bp = make_google_blueprint(redirect_to="home")
 app.register_blueprint(google_bp, url_prefix="/login") 
 
